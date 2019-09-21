@@ -28,14 +28,14 @@ func WordCountByString(s string) int {
 	return len(strings.Fields(s))
 }
 
-// GetCharCountMap returns the char count map of a given string
+// GetCharCountMap returns the char count of a given string
 func GetCharCountMap(s string) map[string]int {
 	splitStringSlice := strings.Split(s, "")
 	stringMap := make(map[string]int)
 
-	for _, str := range splitStringSlice {
+	for _, char := range splitStringSlice {
 		// get count of iteration
-		stringMap[str] = strings.Count(s, str)
+		stringMap[char] = strings.Count(s, char)
 	}
 
 	return stringMap
