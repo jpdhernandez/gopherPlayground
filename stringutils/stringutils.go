@@ -25,7 +25,18 @@ func WordCountByRegex(s string) int {
 
 // WordCountByString returns the word count of a given string
 func WordCountByString(s string) int {
-	splitStringSlice := strings.Split(s, " ")
+	return len(strings.Fields(s))
+}
 
-	return len(splitStringSlice)
+// GetCharCountMap returns the char count map of a given string
+func GetCharCountMap(s string) map[string]int {
+	splitStringSlice := strings.Split(s, "")
+	stringMap := make(map[string]int)
+
+	for _, str := range splitStringSlice {
+		// get count of iteration
+		stringMap[str] = strings.Count(s, str)
+	}
+
+	return stringMap
 }
