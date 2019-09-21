@@ -34,7 +34,7 @@ func GetCharCountMap(s string) map[string]int {
 	stringMap := make(map[string]int)
 
 	for _, char := range splitStringSlice {
-		// get count of iteration
+		// get count of char in string in iteration
 		stringMap[char] = strings.Count(s, char)
 	}
 
